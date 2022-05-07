@@ -38,6 +38,7 @@ video{
     width: 100%;
     z-index: -10;
     height: 100vh;
+    object-fit: cover;
 }
 .time-display{
     position: absolute;
@@ -78,9 +79,57 @@ video{
 .sound-picker button img{
     /* height: 100%; */
 }
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+   
 
-@media screen and (max-width:769px){
+}
+footer a{
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 1em;
+}
+
+@media screen and (max-width:650px){
     .app{
+        height: 100vh;
         flex-direction: column;
+    }
+    .time-select,
+    .sound-picker,
+    .player-container{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+    }
+    .player-container svg{
+        height: 0;
+    }
+    .player-container .play{
+        width: 50px;
+    }
+    .time-display{
+        position: absolute;
+        top: 00px;
+        color: #fff;
+        font-size: 50px;
+    }
+    .sound-picker button{
+        border: none;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        padding: 15px;
+    }
+    .sound-picker button img{
+        width: 50px;
+    }
+    .time-select button{
+        font-size: 1em;
     }
 }
